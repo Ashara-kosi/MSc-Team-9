@@ -2,14 +2,14 @@ from flask import Flask, render_template, request
 from model import preprocess_img, predict_result
 
 # Instantiating flask app
-app = Flask(__name__)
-
+#app = Flask(__name__)
+app = Flask(__name__, template_folder=r'C:\Users\KOSI\OneDrive\Documents\first coursework\api_test\templates',
+             static_folder=r'C:\Users\KOSI\OneDrive\Documents\first coursework\api_test\static')
 
 # Home route
 @app.route("/")
 def main():
     return render_template("index.html")
-
 
 # Prediction route
 @app.route('/prediction', methods=['POST'])

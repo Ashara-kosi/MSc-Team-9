@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 
 # Loading model
-model = load_model("./asl_lstm_model5.h5")
+model = load_model("asl_lstm_model5.h5")
 
 
 # Preparing and pre-processing the image
